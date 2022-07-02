@@ -33,6 +33,7 @@ class App:
 
     def run(self):
         self.__set_setting()
+        print(self.levels)
 
 
 if __name__ == '__main__':
