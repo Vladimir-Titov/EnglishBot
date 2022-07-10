@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import logging
 from asyncio import sleep
 from typing import Dict
 
@@ -8,6 +9,8 @@ from aiogram.types import CallbackQuery
 
 from application import MyEnv, TaskFromLevel, Task
 from tel_bot import KeyboardGen
+
+log = logging.getLogger('aiogram')
 
 
 class App:
