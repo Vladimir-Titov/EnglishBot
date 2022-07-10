@@ -54,8 +54,10 @@ class TaskFromLevel:
         level_copy = self.level.dict.copy()
         question: str = random.choice(list(self.level.dict.keys()))
         answer: str = self.level.dict[question]
-        other: List[str] = list
+        other: List[str] = list()
         level_copy.pop(question)
         for i in range(3):
             other.append(random.choice(list(self.level.dict.values())))
+        other.append(answer)
+        random.shuffle(other)
         return Task(question, answer, other)
